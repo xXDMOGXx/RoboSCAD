@@ -33,7 +33,7 @@ module extrude_blind(direction, amount) {
     if (direction > 0) {
         linear_extrude(amount)
         children();
-    // Any positive number extrudes in the negative direction
+    // Any negative number extrudes in the negative direction
     } else if (direction < 0) {
         translate([0, 0, -amount])
         linear_extrude(amount)

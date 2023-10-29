@@ -82,7 +82,7 @@ module outer_fillet_2D(radius, edge1, edge2) {
     v2d = v_dir(v2);
     // Finds the angle between the two vectors
     direction = find_angle(v1, v2) / 2;
-    // Finds which angle is the initial side of the angle (the other would be the terminal)
+    // Finds which vector is the initial side of the angle (the other would be the terminal)
     initial = angle_distance(v1d, v2d) > 0 ? v1d : v2d;
     // Offsets the initial direction to the middle of both vectors
     o_dir = initial + direction;

@@ -1,3 +1,5 @@
+// NOTICE! You must us preview on this script if you want to see your models
+
 // Make sure that all parts you want included in the assembly are imported
 include <global_variables.scad>
 use <chassis.scad>

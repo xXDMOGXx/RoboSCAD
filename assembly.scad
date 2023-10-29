@@ -1,7 +1,6 @@
 // NOTICE! You must use preview on this script if you want to see your models
 
 // Make sure that all parts you want included in the assembly are imported
-include <global_variables.scad>
 use <chassis.scad>
 
 // These two variables increase the resolution. Keep them commented when editing the

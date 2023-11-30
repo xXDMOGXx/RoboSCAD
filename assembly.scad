@@ -1,12 +1,12 @@
 // NOTICE! You must use preview on this script if you want to see your models
 
 // Make sure that all parts you want included in the assembly are imported
-use <chassis.scad>
+use <parts/chassis.scad>
 
 // These two variables increase the resolution. Keep them commented when editing the
 // the model to reduce strain on your computer
-$fa = 1;
-$fs = 0.4;
+//$fa = 1;
+//$fs = 0.4;
 
 // This is where you call all the parts you want loaded.
 // If you give your parts parameters, you can call multiple of the same part with different outcomes.

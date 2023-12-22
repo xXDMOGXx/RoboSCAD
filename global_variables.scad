@@ -2,6 +2,9 @@
 
 default_clearance = 0.508;
 
+m3_screw_diameter = 3;
+m3_screw_length = 12;
+
 body_length = 101.6;
 body_width = 152.4;
 plate_thickness = 4.064;

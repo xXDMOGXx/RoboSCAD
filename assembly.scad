@@ -1,12 +1,20 @@
 // NOTICE! You must use preview on this script if you want to see your models
 
 // Make sure that all parts you want included in the assembly are imported
+include <global_variables.scad>
 use <chassis.scad>
 
-// These two variables increase the resolution. Keep them commented when editing the
+render = false;
+
+// The initial rotation, translation, and distance of the camera. You can change this to whatever you like most
+$vpr = [35,0,0];
+$vpt = [body_width/2, 0, wall_height*2];
+$vpd = 400;
+// These two variables increase the resolution. Set render to false when editing the
 // the model to reduce strain on your computer
-$fa = 1;
-$fs = 0.4;
+$fa = render ? 1 : 12;
+$fs = render ? 0.4 : 0.75;
+
 
 // This is where you call all the parts you want loaded.
 // If you give your parts parameters, you can call multiple of the same part with different outcomes.

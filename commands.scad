@@ -66,12 +66,13 @@ module sketch_plane(plane) {
     children();
 }
 
-// Outer Fillet 2D applies a fillet to an outer corner of two 2D intersecting lines
+// Fillet 2D applies a fillet to an outer or inner corner of two 2D intersecting lines
 // float radius: The radius of the circle used to fillet the corner
 // float[2][2] edge1: Array of two 2D points ([x,y]). Order of points or edges doesn't matter
 // float[2][2] edge2: Array of two 2D points ([x,y]). Order of points or edges doesn't matter
+// boolean isOuter: A boolean that determines whether the fillet is for an inner or an outer corner
 // Both edges must be a line that terminates at the mutual intersection
-module outer_fillet_2D(radius, edge1, edge2) {
+module fillet_2D(radius, edge1, edge2, isOuter) {
     // Sorts the edges to find the vertex and the position vectors
     sorted = sort_edge_points(edge1, edge2);
     corner = sorted[0];
@@ -96,17 +97,34 @@ module outer_fillet_2D(radius, edge1, edge2) {
     tan1 = [corner[0]+vx(tan_l, v1d), corner[1]+vy(tan_l, v1d)];
     tan2 = [corner[0]+vx(tan_l, v2d), corner[1]+vy(tan_l, v2d)];
     
-    // Cuts out the final polygon from all the children, leaving behind a perfect filleted corner
-    difference() {
-        children();
-        // Cuts the circle out of the polygon, leaving behind everything the fillet removes
+    if (isOuter) {
+        // Cuts out the final polygon from all the children, leaving behind a perfect filleted corner
         difference() {
-            // creates a polygon that follows the form of the edges and center point
-            polygon(points = [corner, tan1, center, tan2]);
-            // Moves the circle to be tangent to both edges
-            translate(center) {
-                // Creates a circle with the radius of the fillet
-                circle(radius);
+            children();
+            // Cuts the circle out of the polygon, leaving behind everything the fillet removes
+            difference() {
+                // creates a polygon that follows the form of the edges and center point
+                polygon(points = [corner, tan1, center, tan2]);
+                // Moves the circle to be tangent to both edges
+                translate(center) {
+                    // Creates a circle with the radius of the fillet
+                    circle(radius);
+                }
+            }
+        }
+    } else {
+        // Merges the union into the corner to make 1 solid part
+        union() {
+            children();
+            // Cuts the circle out of the polygon, leaving behind everything the fillet adds
+            difference() {
+                // creates a polygon that follows the form of the edges and center point
+                polygon(points = [corner, tan1, center, tan2]);
+                // Moves the circle to be tangent to both edges
+                translate(center) {
+                    // Creates a circle with the radius of the fillet
+                    circle(radius);
+                }
             }
         }
     }

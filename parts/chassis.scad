@@ -8,10 +8,10 @@ module bottom_plate_sketch() {
     // All the points are defined in global_dimensions
 
     // Creates a fillet on all 4 corners with radius of wall_outer_corner_fillet
-    outer_fillet_2D(wall_outer_corner_fillet, b_edge, l_edge)
-    outer_fillet_2D(wall_outer_corner_fillet, l_edge, t_edge)
-    outer_fillet_2D(wall_outer_corner_fillet, t_edge, r_edge)
-    outer_fillet_2D(wall_outer_corner_fillet, r_edge, b_edge)
+    fillet_2D(wall_outer_corner_fillet, b_edge, l_edge, true)
+    fillet_2D(wall_outer_corner_fillet, l_edge, t_edge, true)
+    fillet_2D(wall_outer_corner_fillet, t_edge, r_edge, true)
+    fillet_2D(wall_outer_corner_fillet, r_edge, b_edge, true)
     // The initial shape of the sketch goes at the very bottom.
     // Transformations are applied from the bottom up
     polygon(points = [bl_vertex, tl_vertex, tr_vertex, br_vertex]);

@@ -1,10 +1,10 @@
 // NOTICE! You must use preview on this script if you want to see your models
 
 // Make sure that all parts you want included in the assembly are imported
-include <global_variables.scad>
-use <chassis.scad>
+include <lib/global_variables.scad>
+use <parts/chassis.scad>
 
-render = false;
+render = true;
 
 // The initial rotation, translation, and distance of the camera. You can change this to whatever you like most
 $vpr = [35,0,0];

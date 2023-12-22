@@ -38,3 +38,5 @@ weapon_gap = 3.81;
 flat_plane = [[0,0,0], [0,0,0]];
 tilt_plane = [[0,45,0], [0,0,0]];
 global_origin = [0,0,0];
+
+export = false;

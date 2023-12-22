@@ -1,21 +1,11 @@
-// Make sure to add these three imports to every part file you make
+// These three imports are added to every part file you make
 include <../lib/global_variables.scad>
 include <../lib/global_dimensions.scad>
 use <../lib/commands.scad>
 
 // Each sketch in a part will have it's own module
 module bottom_plate_sketch() {
-    // Just some variable that hold the 4 corner points of the plate
-    bl_vertex = [0,0];
-    tl_vertex = [0,body_length];
-    tr_vertex = [body_width,body_length];
-    br_vertex = [body_width,0];
-
-    // The 4 edges of the plate
-    b_edge = [br_vertex, bl_vertex];
-    l_edge = [bl_vertex, tl_vertex];
-    t_edge = [tl_vertex, tr_vertex];
-    r_edge = [tr_vertex, br_vertex];
+    // All the points are defined in global_dimensions
 
     // Creates a fillet on all 4 corners with radius of wall_outer_corner_fillet
     outer_fillet_2D(wall_outer_corner_fillet, b_edge, l_edge)
@@ -44,4 +34,8 @@ module chassis() {
             bottom_plate_sketch();
         }
     }
+}
+
+if (export) {
+    chassis();
 }

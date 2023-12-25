@@ -37,5 +37,9 @@ module chassis() {
 }
 
 if (export) {
+    // These two variables increase the resolution. Set render to false when editing the
+    // the model to reduce strain on your computer
+    $fa = render ? 1 : 12;
+    $fs = render ? 0.4 : 0.75;
     chassis();
 }

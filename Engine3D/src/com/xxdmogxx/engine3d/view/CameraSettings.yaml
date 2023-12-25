@@ -1,0 +1,7 @@
+FPS : 60
+UPS : 100
+wireframe : false
+filled : true
+near : 0.1f
+far : 1000.0f
+fov : 90

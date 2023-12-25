@@ -1,0 +1,13 @@
+!!com.xxdmogxx.engine3d.config.ControlSettings
+mouse : false
+touchpad : true
+touchscreen : false
+zoomSensitivity : 15.0f
+panSensitivity : 0.3f
+rotateSensitivity : 0.3f
+panButtonMouse : 2
+rotateButtonMouse : 1
+panButtonTouchpad : 1
+rotateButtonTouchpad : 3
+panButtonTouchscreen : 3
+rotateButtonTouchscreen : 1

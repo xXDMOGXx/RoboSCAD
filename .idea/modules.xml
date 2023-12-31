@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RoboScad.iml" filepath="$PROJECT_DIR$/RoboScad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RoboSCAD.iml" filepath="$PROJECT_DIR$/RoboSCAD.iml" />
     </modules>
   </component>
 </project>

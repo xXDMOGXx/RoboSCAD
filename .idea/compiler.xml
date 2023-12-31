@@ -4,6 +4,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Engine3D" options="--add-modules java.desktop" />
       <module name="RoboSCAD" options="--add-modules java.desktop" />
+      <module name="RoboScad" options="--add-modules java.desktop" />
     </option>
   </component>
 </project>

@@ -1,14 +1,14 @@
-package com.xxdmogxx.engine3d;
+package engine3d;
 
-import com.xxdmogxx.engine3d.config.Controls;
-import com.xxdmogxx.engine3d.datatypes.Loc;
-import com.xxdmogxx.engine3d.datatypes.Model;
-import com.xxdmogxx.engine3d.datatypes.Rot;
-import com.xxdmogxx.engine3d.datatypes.Triangle;
-import com.xxdmogxx.engine3d.datatypes.Vector;
-import com.xxdmogxx.engine3d.file.Obj;
-import com.xxdmogxx.engine3d.render.Window;
-import com.xxdmogxx.engine3d.view.Camera;
+import engine3d.config.Controls;
+import engine3d.datatypes.Loc;
+import engine3d.datatypes.Model;
+import engine3d.datatypes.Rot;
+import engine3d.datatypes.Triangle;
+import engine3d.datatypes.Vector;
+import engine3d.file.Obj;
+import engine3d.render.Window;
+import engine3d.view.Camera;
 
 import java.util.*;
 import javax.swing.SwingUtilities;
@@ -61,16 +61,16 @@ public class Main implements Runnable {
 
         // Creates a model object using a .obj loaded from a file
         Model chassis = new Model(new Loc(0.0f, 0.0f, 500.0f),
-                dRot, dScale, dColor, Obj.loadObjFile("src/com/xxdmogxx/engine3d/resources/chassis.obj"));
+                dRot, dScale, dColor, Obj.loadObjFile("src/engine3d/resources/chassis.obj"));
 
         //Model assembly = new Model(new Loc(0.0f, 0.0f, 500.0f),
-        //        dRot, dScale, dColor, Obj.loadObjFile("src/com/xxdmogxx/engine3d/resources/assembly.obj"));
+        //        dRot, dScale, dColor, Obj.loadObjFile("src/engine3d/resources/assembly.obj"));
 
         //Model axis = new Model(new Loc(0.0f, 0.0f, 50.0f),
-        //        dRot, dScale, dColor, loadObjFile("src/com/xxdmogxx/engine3d/resources/axis.obj"));
+        //        dRot, dScale, dColor, loadObjFile("src/engine3d/resources/axis.obj"));
 
         //Model teapot = new Model(new Loc(0.0f, 0.0f, 100.0f),
-        //        dRot, dScale, dColor, loadObjFile("src/com/xxdmogxx/engine3d/resources/teapot.obj"));
+        //        dRot, dScale, dColor, loadObjFile("src/engine3d/resources/teapot.obj"));
 
         // The objects that are created in the world and drawn
         objectList.add(chassis);

@@ -1,9 +1,9 @@
-package com.xxdmogxx.engine3d.view;
+package engine3d.view;
 
-import com.xxdmogxx.engine3d.Main;
-import com.xxdmogxx.engine3d.datatypes.Model;
-import com.xxdmogxx.engine3d.datatypes.Vector;
-import com.xxdmogxx.engine3d.render.Window;
+import engine3d.Main;
+import engine3d.datatypes.Model;
+import engine3d.datatypes.Vector;
+import engine3d.render.Window;
 import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
@@ -39,7 +39,7 @@ public class Camera {
         Yaml yaml = new Yaml(new Constructor(CameraSettings.class, loaderoptions));
         InputStream inputStream = this.getClass()
                 .getClassLoader()
-                .getResourceAsStream("com/xxdmogxx/engine3d/view/CameraSettings.yaml");
+                .getResourceAsStream("engine3d/view/CameraSettings.yaml");
         settings = yaml.load(inputStream);
     }
 

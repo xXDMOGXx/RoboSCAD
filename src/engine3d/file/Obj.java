@@ -1,6 +1,6 @@
-package com.xxdmogxx.engine3d.file;
+package engine3d.file;
 
-import com.xxdmogxx.engine3d.datatypes.Loc;
+import engine3d.datatypes.Loc;
 
 import java.io.File;
 import java.io.FileNotFoundException;

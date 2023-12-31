@@ -1,4 +1,4 @@
-package com.xxdmogxx.engine3d;
+package engine3d;
 
 public enum Status {
     RUNNING, STOPPED

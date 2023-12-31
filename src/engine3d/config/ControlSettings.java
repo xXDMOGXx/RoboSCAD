@@ -1,4 +1,4 @@
-package com.xxdmogxx.engine3d.config;
+package engine3d.config;
 
 public class ControlSettings {
     public boolean mouse;

@@ -1,4 +1,4 @@
-package com.xxdmogxx.engine3d.view;
+package engine3d.view;
 
 public class CameraSettings {
     // Target frames per second

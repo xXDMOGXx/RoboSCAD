@@ -1,6 +1,6 @@
-package com.xxdmogxx.engine3d.render;
+package engine3d.render;
 
-import com.xxdmogxx.engine3d.config.Controls;
+import engine3d.config.Controls;
 
 import javax.swing.*;
 import java.awt.Dimension;

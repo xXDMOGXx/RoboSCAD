@@ -1,7 +1,7 @@
-package com.xxdmogxx.engine3d.config;
+package engine3d.config;
 
-import com.xxdmogxx.engine3d.Main;
-import com.xxdmogxx.engine3d.render.Canvas;
+import engine3d.Main;
+import engine3d.render.Canvas;
 import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
@@ -30,7 +30,7 @@ public class Controls {
         Yaml yaml = new Yaml(new Constructor(ControlSettings.class, loaderoptions));
         InputStream inputStream = this.getClass()
                 .getClassLoader()
-                .getResourceAsStream("com/xxdmogxx/engine3d/config/ControlSettings.yaml");
+                .getResourceAsStream("engine3d/config/ControlSettings.yaml");
         settings = yaml.load(inputStream);
     }
 

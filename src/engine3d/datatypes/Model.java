@@ -1,4 +1,4 @@
-package com.xxdmogxx.engine3d.datatypes;
+package engine3d.datatypes;
 
 import java.util.ArrayList;
 

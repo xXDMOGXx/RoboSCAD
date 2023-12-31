@@ -1,7 +1,7 @@
-package com.xxdmogxx.engine3d.render;
+package engine3d.render;
 
-import com.xxdmogxx.engine3d.Main;
-import com.xxdmogxx.engine3d.datatypes.Triangle;
+import engine3d.Main;
+import engine3d.datatypes.Triangle;
 
 import javax.swing.*;
 import java.awt.*;

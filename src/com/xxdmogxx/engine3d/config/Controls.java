@@ -2,12 +2,10 @@ package com.xxdmogxx.engine3d.config;
 
 import com.xxdmogxx.engine3d.Main;
 import com.xxdmogxx.engine3d.render.Canvas;
-import com.xxdmogxx.engine3d.view.CameraSettings;
 import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 import org.yaml.snakeyaml.inspector.TagInspector;
-
 
 import java.awt.event.*;
 import java.io.InputStream;

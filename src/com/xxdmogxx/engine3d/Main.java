@@ -61,16 +61,16 @@ public class Main implements Runnable {
 
         // Creates a model object using a .obj loaded from a file
         Model chassis = new Model(new Loc(0.0f, 0.0f, 500.0f),
-                dRot, dScale, dColor, Obj.loadObjFile("Engine3D/src/com/xxdmogxx/engine3d/resources/chassis.obj"));
+                dRot, dScale, dColor, Obj.loadObjFile("src/com/xxdmogxx/engine3d/resources/chassis.obj"));
 
         //Model assembly = new Model(new Loc(0.0f, 0.0f, 500.0f),
-        //        dRot, dScale, dColor, Obj.loadObjFile("Engine3D/src/com/xxdmogxx/engine3d/resources/assembly.obj"));
+        //        dRot, dScale, dColor, Obj.loadObjFile("src/com/xxdmogxx/engine3d/resources/assembly.obj"));
 
         //Model axis = new Model(new Loc(0.0f, 0.0f, 50.0f),
-        //        dRot, dScale, dColor, loadObjFile("Engine3D/src/com/xxdmogxx/engine3d/resources/axis.obj"));
+        //        dRot, dScale, dColor, loadObjFile("src/com/xxdmogxx/engine3d/resources/axis.obj"));
 
         //Model teapot = new Model(new Loc(0.0f, 0.0f, 100.0f),
-        //        dRot, dScale, dColor, loadObjFile("Engine3D/src/com/xxdmogxx/engine3d/resources/teapot.obj"));
+        //        dRot, dScale, dColor, loadObjFile("src/com/xxdmogxx/engine3d/resources/teapot.obj"));
 
         // The objects that are created in the world and drawn
         objectList.add(chassis);
